@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    font-size: 20px;
 }
 .clock{
     background-color: rgb(43, 38, 38);
@@ -16,48 +17,41 @@
     height: 300px;
     border: 2px solid rgb(42, 38, 38);
     border-radius: 50%;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hrs{
     position: absolute;
     transform: rotate(calc(30deg*var(--num)));
-    inset: 16px;
+    inset: 10px;/*this is shorthand property that combines position properties top,bottom,left,right */
+    /*inset : 10px ----> 10px from top,bottom ,right,left*/
     text-align: center;
 }
-.hrs:nth-child(1){
-    --num : 1;
+.hrs b{
+    transform: rotate(calc(-30deg*var(--num)));
+    display: inline-block;/*as span and b tag are inline tags which don't respect transformation(like rotate,scale,etc.) on other hand block or inline-block elements respect transformation*/
+    /*thus when we apply transform to inline elements CSS ignores that*/
 }
-.hrs:nth-child(2){
-    --num : 2;
+.clock .center{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
 }
-.hrs:nth-child(3){
-    --num : 3;
+.hands{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
-.hrs:nth-child(4){
-    --num : 4;
-}
-.hrs:nth-child(5){
-    --num : 5;
-}
-.hrs:nth-child(6){
-    --num : 6;
-}
-.hrs:nth-child(7){
-    --num : 7;
-}
-.hrs:nth-child(8){
-    --num : 8;
-}
-.hrs:nth-child(9){
-    --num : 9;
-}
-.hrs:nth-child(10){
-    --num : 10;
-}
-.hrs:nth-child(11){
-    --num : 11;
-}
-.hrs:nth-child(12){
-    --num : 12;
+.hands i{
+    position:absolute;
+    display: inline-block;
+    background-color: var(--clr);
+    height: var(--h);
+    width: 10px;
 }
