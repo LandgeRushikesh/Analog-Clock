@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: rgb(38, 34, 34);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.clock{
+    background-color: rgb(43, 38, 38);
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(42, 38, 38);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    position: relative;
+}
+.hrs{
+    position: absolute;
+    transform: rotate(calc(30deg*var(--num)));
+    inset: 16px;
+    text-align: center;
+}
+.hrs:nth-child(1){
+    --num : 1;
+}
+.hrs:nth-child(2){
+    --num : 2;
+}
+.hrs:nth-child(3){
+    --num : 3;
+}
+.hrs:nth-child(4){
+    --num : 4;
+}
+.hrs:nth-child(5){
+    --num : 5;
+}
+.hrs:nth-child(6){
+    --num : 6;
+}
+.hrs:nth-child(7){
+    --num : 7;
+}
+.hrs:nth-child(8){
+    --num : 8;
+}
+.hrs:nth-child(9){
+    --num : 9;
+}
+.hrs:nth-child(10){
+    --num : 10;
+}
+.hrs:nth-child(11){
+    --num : 11;
+}
+.hrs:nth-child(12){
+    --num : 12;
+}
