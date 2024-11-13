@@ -42,16 +42,16 @@
     border-radius: 50%;
     background-color: black;
 }
-.hands{
+.hand{
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
-.hands i{
-    position:absolute;
-    display: inline-block;
-    background-color: var(--clr);
+.hand i{
+    position: absolute;
+    width: var(--w);
     height: var(--h);
-    width: 10px;
+    background-color: var(--c);
+    border-radius: 8px;
 }
